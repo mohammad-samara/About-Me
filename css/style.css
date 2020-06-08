@@ -1,0 +1,16 @@
+body{
+    background-color: blueviolet;
+}
+#welcome{
+    color: chartreuse;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+}
+main p {
+    background-color: rgb(40, 158, 29);
+    color: darkorange;
+    width: 450px;
+    padding: 10px;
+    font-family: fantasy;
+    line-height: 30px;
+}
