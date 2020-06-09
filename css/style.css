@@ -6,11 +6,28 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bolder;
 }
-main p {
+#conclusion p {
     background-color: rgb(40, 158, 29);
     color: darkorange;
     width: 450px;
     padding: 10px;
     font-family: fantasy;
     line-height: 30px;
+}
+#lists{
+background-color: darkslategray;
+padding: 10px;
+width: 600px;
+}
+#exp-ul ,#ed-ul{
+    background-color: floralwhite;
+    color: blueviolet;
+    padding: 10px;
+    margin: 5px;
+}
+#top-ten-list{
+    border: 3px dashed royalblue;
+    background-color: saddlebrown;
+    color: gold;
+    padding-left: 3px;
 }
