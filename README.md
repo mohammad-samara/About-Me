@@ -1,4 +1,4 @@
-# AbdallahSafi-Blog
+# mohammad-samara-Blog
 
 <!-- TABLE OF CONTENTS -->
 
@@ -50,23 +50,29 @@ I added a guessing game to the blog so the visitor can guess who your through se
 You can Change the questions and the answers based on your interest
 
 ```javascript
-function question1() {
-  var q1 = "Am I a male ?";
-  var a = prompt(q1).toLowerCase();
-  if (a === "yes" || a === "y") {
-    alert("You guessed it right");
-    //   console.log('You guessed it right');
-  } else if (a === "no" || a === "n") {
-    alert("Wrong!");
-    //   console.log('Wrong!');
-  } else {
-    alert("You should answer with y/n or yes/no only");
-    question1();
-  }
+function Q1() {
+    var myName = prompt("is my name mohammad samara?");
+    switch (myName.toLowerCase()) {
+        case 'yes':
+        case 'y':
+            //console.log("right answer");
+            alert("right answer");
+            sum += 1;
+            break;
+        case 'no':
+        case 'n':
+            //console.log("wrong answer");
+            alert("wrong answer");
+            break;
+        default:
+            //console.log("incorrect input");
+            alert("incorrect input");
+            break;
+    }
 }
 ```
 
-- `q1` where you put your first question
+- `Q1` where you put your first question
 - The alerts where you put your responses
 
 _Note_: There is five functions for five question you can repeat this as many times as you wish.
@@ -83,45 +89,24 @@ This question accepts a numeric input and the user have 4 attemps to guess the r
 see the code
 
 ```javascript
-var q = 'How old I am ?';
-var attemps = 0;
-while(attemps < 4){
-  var a = Number(prompt(q));
-  // console.log(a);
-  switch (true) {
-  case (a === 29):
-    alert('You guessed it right!');
-    nca= nca + 1;
-    // console.log('right');
-    break;
-  case (a > 29):
-    // console.log('high');
-    attemps = attemps + 1;
-    alert('oobs! too high. You have '+(4-attemps)+' tries left');
-    // console.log(attemps);
-    break;
-  case (0 < a && a < 29):
-    // console.log('low');
-    attemps+=1;
-    alert('oobs! too low. You have '+(4-attemps)+' tries left');
-    // console.log(attemps);
-    break;
-  case (a === 0 || isNaN(a)):
-    // console.log('not valid');
-    attemps+=1;
-    alert('You should add a valid number. You have '+(4-attemps)+' tries left');
-    // console.log(attemps);
-    break;
-
-  default:
-    // console.log('default');
-    break;
-  }
-  if (a === 29) {
-    break;
-  }else if(attemps === 4){
-    alert('Sorry, You had four tries. The right answer is 29');
-  }
+function Q6() {
+    for (var i = 1; i <= 4; i++) {
+        var guessNum = prompt("guess the number which I am thinking about?(enter a number)")
+        if (guessNum == 7) {
+            alert("write answer")
+            sum += 1;
+            console.log("the user quessed the right number " + guessNum)
+            break;
+        } else if ((7 - guessNum) > 0) {
+            alert("too low")
+            console.log("the user quessed the wrong number " + guessNum)
+            if (i == 4) { alert("the right answer is 7") }
+        } else {
+            alert("too high")
+            console.log("the user quessed the wrong number " + guessNum)
+            if (i == 4) { alert("the right answer is 7") }
+        }
+    }
 }
 ```
 
@@ -130,30 +115,31 @@ while(attemps < 4){
 This question is about guessing a the correct answer from a multiple correct answers and the user have 6 attemps to get the correct answer.
 
 ```javascript
-var cars =[ 'bmw', 'fiat', 'kia'];
-var correct = false;
-var att = 6;
-while(!correct && att > 0){
-  q = 'What car models do you think I like the most ?';
-  a = prompt(q).toLowerCase();
-  for(var i = 0; i < cars.length; i++){
-    if (a === cars[i]){
-      correct = true;
-      alert('Correct answer!');
-      nca= nca + 1;
-      // console.log('correct');
+function Q7() {
+    var favCar = ["bmw", "jeep", "kia"];
+    var correct = false;
+    for (var i = 1; i <= 6; i++) {
+        var guessCar = prompt("guess the car brand which I like");
+        for (var j = 0; j < favCar.length; j++) {
+            if (guessCar.toLowerCase() == favCar[j]) {
+                correct = true;
+            }
+        }
+        if (correct) {
+            alert("right answer");
+            sum += 1;
+            console.log("the user guess the right car: " + guessCar)
+            break;
+        } else {
+            alert("wrong answer")
+            console.log("the user guess the wrong car: " + guessCar)
+        }
     }
-  }
-  if(!correct){
-    att = att - 1;
-    alert('wrong answer, you have '+att+' tries left');
-  }
+    var allAnswer = "";
+    for (var i = 0; i < favCar.length; i++) {
+        allAnswer += favCar[i] + "  ";
+    } alert("the right answers are: " + allAnswer)
 }
-var liked ='';
-for( var d = 0; d<cars.length; d++){
-  liked = liked +'-'+cars[d];
-}
-alert('Car models that I like are '+'('+ liked +')' );
 ```
 
 # Contributing
@@ -166,12 +152,16 @@ Contributions are what make the open source community such an amazing place to b
 - Push to the Branch (`git push origin feature/AmazingFeature`)
 - Open a Pull Request
 
+# contribution
+
+this project has been edited by Hisham Alnaji
+
 # License
 
 Distributed under the MIT License. See [LICENSE](https://www.mit.edu/~amini/LICENSE.md) for more information.
 
 # Contact
 
-Abdallah Safi - mr.abdallahsafi@gmail.com
+Mohammad samara - mohammad.ab.samara@gmail.com
 
-Project Link: https://github.com/AbdallahSafi/AbdallahSafi-Blog
+Project Link: https://github.com/mohammad-samara/About-Me
