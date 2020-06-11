@@ -9,7 +9,7 @@ body{
 #conclusion p {
     background-color: rgb(40, 158, 29);
     color: darkorange;
-    width: 450px;
+    width: 650px;
     padding: 10px;
     font-family: fantasy;
     line-height: 30px;
@@ -30,4 +30,10 @@ width: 600px;
     background-color: saddlebrown;
     color: gold;
     padding-left: 3px;
+    margin: 5px;
+}
+#conclusion p img{
+    float: right;
+    width: 200px;
+    height: 180px;
 }
